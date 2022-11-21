@@ -17,7 +17,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_okv94Gl2Ee2xY9MoZrE9wA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_8ysOIGmHEe2xY9MoZrE9wA" name="[OCB] Operational Capabilities" repPath="#_8xc4AGmHEe2xY9MoZrE9wA" changeId="639767c9-3ac1-4701-bf6e-7692ea4158e0">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_8ysOIGmHEe2xY9MoZrE9wA" name="[OCB] Operational Capabilities" repPath="#_8xc4AGmHEe2xY9MoZrE9wA" changeId="2ec7f26e-7b89-4b32-8d29-57926dbf61ca">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Capabilities%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg" href="Drone_livraison.capella#54cc0243-cda3-474f-94f0-084558467dd5"/>
       </ownedRepresentationDescriptors>
