@@ -44,12 +44,22 @@
       <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
           id="23558c5b-28f6-442e-aa91-700207886176" name="Operational Activities">
         <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-            id="748f98c3-f8cf-4561-916c-6da37ae5eaa5" name="Root Operational Activity"/>
+            id="748f98c3-f8cf-4561-916c-6da37ae5eaa5" name="Root Operational Activity">
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="78794458-3db7-4c8b-9447-8c75a5782a02" name="Provide energy"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="f49be759-44e6-4a87-afe6-2e95c9bfc99d" name="Receive package"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="d0921772-6ca3-4b1b-9ec9-38570b8fbbb8" name="Provide package"/>
+        </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
           id="54cc0243-cda3-474f-94f0-084558467dd5" name="Operational Capabilities">
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="a8c539bc-297d-437e-a7e2-248ae1b16ba2" name="Ensure package delivery">
+          <ownedScenarios xsi:type="org.polarsys.capella.core.data.interaction:Scenario"
+              id="c0a4a234-66e1-4d0c-9ee6-1feb93fba150" name="[OES] Ensure package delivery"
+              kind="INTERACTION"/>
           <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
               id="5fc285f1-25b0-43cc-82c0-e3ac5a1003b5" included="#2780a236-11c4-40ff-ac1e-60dc9dd7b159"/>
           <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
@@ -108,6 +118,16 @@
             name="Company" abstractType="#d7de9973-82f6-478c-bdd5-c050ff931098"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="58a9372b-8011-4804-bbe5-defbb01b4f6f"
             name="External disturbances" abstractType="#8d384be6-c01f-456c-a629-2afae7ef934f"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="2131be32-dbc5-4d1d-b56e-41ec2ae9f73f"
+            name="Package receiver" abstractType="#260979a4-12af-402f-b152-5a2ef92bda8e"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="b09115a6-ec4b-4d68-84cd-9f77dadafb3c"
+            name="Energy provider" abstractType="#972188cc-fa08-4c5c-ad5e-24fd37df3309"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="5f6108e2-d8c8-411b-851a-77cfdf9438a9"
+            name="External distrubances" abstractType="#d2fde3be-ba23-45c7-a93c-865fb724be52"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="e21f4fc4-6b75-4cff-91cf-c6487b769d4d"
+            name="Package provider" abstractType="#4da98f74-25f3-41b0-a90e-401445de8239"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="998a0780-a57c-4c9b-acb9-c5c8bc6576cf"
+            name="Company" abstractType="#8bb0b7d2-cc1e-4ee1-b85d-a8641d2dfee4"/>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="7990cd08-ad8c-4be9-a201-d00c105e691d"
             name="Package receiver" actor="true" human="true"/>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="aec919fd-7c28-48c9-8e5b-9f44d853bd6e"
@@ -133,6 +153,41 @@
         </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="8d384be6-c01f-456c-a629-2afae7ef934f"
             name="External disturbances" actor="true" human="true"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="260979a4-12af-402f-b152-5a2ef92bda8e"
+            name="Package receiver" actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="db3e043c-4557-42fd-b271-970b52a2f72e" targetElement="#f49be759-44e6-4a87-afe6-2e95c9bfc99d"
+              sourceElement="#260979a4-12af-402f-b152-5a2ef92bda8e"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="972188cc-fa08-4c5c-ad5e-24fd37df3309"
+            name="Energy provider" actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="48fefc4d-ae2f-42c0-bdd4-cfe67d5105da" targetElement="#78794458-3db7-4c8b-9447-8c75a5782a02"
+              sourceElement="#972188cc-fa08-4c5c-ad5e-24fd37df3309"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="d2fde3be-ba23-45c7-a93c-865fb724be52"
+            name="External distrubances" actor="true" human="true"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="4da98f74-25f3-41b0-a90e-401445de8239"
+            name="Package provider" actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="9161088a-6c70-4d37-9140-ebd8b36fc04b" targetElement="#d0921772-6ca3-4b1b-9ec9-38570b8fbbb8"
+              sourceElement="#4da98f74-25f3-41b0-a90e-401445de8239"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="8bb0b7d2-cc1e-4ee1-b85d-a8641d2dfee4"
+            name="Company">
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="a491c3f2-a64f-4d0a-8afd-32c6459c8697"
+              name="Logistic" abstractType="#e3ff94d7-af0c-4211-a779-6fd248d1737b"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="711d6a16-b668-4404-87af-68d95aeb1c10"
+              name="Traffic responsible" abstractType="#6a5250dc-123b-4c26-8dce-1a14b3f59104"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="b5303ce4-baec-46cb-8116-88544b5663db"
+              name="Pilot (route definition, monitoring)" abstractType="#39661307-f018-438c-93d6-6b329edf4c61"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="e3ff94d7-af0c-4211-a779-6fd248d1737b"
+              name="Logistic" actor="true" human="true"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="6a5250dc-123b-4c26-8dce-1a14b3f59104"
+              name="Traffic responsible" actor="true" human="true"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="39661307-f018-438c-93d6-6b329edf4c61"
+              name="Pilot (route definition, monitoring)" actor="true" human="true"/>
+        </ownedEntities>
       </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
