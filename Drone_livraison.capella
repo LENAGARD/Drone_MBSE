@@ -56,15 +56,17 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="f45a6e4f-731e-4cd6-8a8a-118954f9a06a" name="Define route"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="d83812f7-08a3-4d1c-9d05-b8194fba2cb4" name="Monitor the transport"/>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="cb283bb4-b136-47b0-ba74-8eeff48a0fa8" name="Organize package reception/delivery"/>
+              id="cb283bb4-b136-47b0-ba74-8eeff48a0fa8" name="Ordered reception"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="b9b45b0d-9661-4cce-bff1-9d94218c5744" name="Organize the traffic"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="bc1e442a-6b2d-4d06-b470-1979ffc71490" name="Vehicule preparation"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="9790f5d6-1ec0-43ae-a5f0-2f73e91e3a20" name="Order package"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="e465e71d-a4e8-44c8-86ef-3c669fa78831" name="Organize package delivery"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="71312174-6657-49d6-869f-60aaa8ae0557" name="Deliver package"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="af457e1b-bfbe-4410-83f0-ffa5d9fc9f97" name="Energy" target="#bc1e442a-6b2d-4d06-b470-1979ffc71490"
               source="#78794458-3db7-4c8b-9447-8c75a5782a02"/>
@@ -78,11 +80,11 @@
               id="fa47d2f9-06fb-4adf-8310-6a1530ec7bdc" name="Order" target="#cb283bb4-b136-47b0-ba74-8eeff48a0fa8"
               source="#9790f5d6-1ec0-43ae-a5f0-2f73e91e3a20"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="37d35b93-cf2d-4850-96ae-ae7d46fec089" name="Provide" target="#cb283bb4-b136-47b0-ba74-8eeff48a0fa8"
+              id="37d35b93-cf2d-4850-96ae-ae7d46fec089" name="Provide" target="#e465e71d-a4e8-44c8-86ef-3c669fa78831"
               source="#d0921772-6ca3-4b1b-9ec9-38570b8fbbb8"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="2e333ea6-24a6-4d9c-a90a-322c0996e2c4" name="Delivery" target="#f49be759-44e6-4a87-afe6-2e95c9bfc99d"
-              source="#cb283bb4-b136-47b0-ba74-8eeff48a0fa8"/>
+              source="#71312174-6657-49d6-869f-60aaa8ae0557"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="e4ad3e10-ca65-41b9-b8e0-f44eb7d18c02" name="Traffic" target="#f45a6e4f-731e-4cd6-8a8a-118954f9a06a"
               source="#b9b45b0d-9661-4cce-bff1-9d94218c5744"/>
@@ -192,9 +194,6 @@
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="fd36573b-9f75-4344-b4bc-ee95e02ee4e9" targetElement="#f45a6e4f-731e-4cd6-8a8a-118954f9a06a"
                 sourceElement="#c6f1f6c2-62d2-4dcd-8342-11ba3d05e9ef"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="1727245e-9d6f-4b7d-b140-1eba41ff3f65" targetElement="#d83812f7-08a3-4d1c-9d05-b8194fba2cb4"
-                sourceElement="#c6f1f6c2-62d2-4dcd-8342-11ba3d05e9ef"/>
           </ownedEntities>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="d9aaf055-c801-4b81-b332-db74e4d939ae"
               name="Logistic" actor="true" human="true">
@@ -203,6 +202,12 @@
                 sourceElement="#d9aaf055-c801-4b81-b332-db74e4d939ae"/>
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="611052e0-1da4-4555-8aa2-dabeb0e0bbad" targetElement="#bc1e442a-6b2d-4d06-b470-1979ffc71490"
+                sourceElement="#d9aaf055-c801-4b81-b332-db74e4d939ae"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="ea3dec40-9500-49b9-acc4-010698717c53" targetElement="#e465e71d-a4e8-44c8-86ef-3c669fa78831"
+                sourceElement="#d9aaf055-c801-4b81-b332-db74e4d939ae"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="4b5a1080-7bbe-41cc-9d36-b2b20993e14f" targetElement="#71312174-6657-49d6-869f-60aaa8ae0557"
                 sourceElement="#d9aaf055-c801-4b81-b332-db74e4d939ae"/>
           </ownedEntities>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="c1c94876-e3e9-4142-bb80-fa07f715bf9c"
