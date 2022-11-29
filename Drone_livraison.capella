@@ -918,7 +918,39 @@
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
-          id="e3957746-247a-4427-ad45-f31e899d3b72" name="Capabilities"/>
+          id="e3957746-247a-4427-ad45-f31e899d3b72" name="Capabilities">
+        <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
+            id="4acc8bf6-56e4-46b4-b450-767db8735788" name="Fix failures">
+          <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
+              id="b36605ad-967c-4074-adc7-a444e9bde888" involved="#3c36d9a5-87a0-4a28-bea8-cbc06f0d45db"/>
+        </ownedCapabilities>
+        <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
+            id="f0c7f8bd-eead-44d3-9cfd-78d06bf26a8d" name="Anticipate failures">
+          <extends xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityExtend"
+              id="7a70c2f6-0f18-4fbc-8891-10ea0236f9c4" extended="#4acc8bf6-56e4-46b4-b450-767db8735788"/>
+          <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
+              id="6761a230-8232-48ba-bc9e-35c030ea705a" involved="#3c36d9a5-87a0-4a28-bea8-cbc06f0d45db"/>
+        </ownedCapabilities>
+        <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
+            id="3a9af8b1-a255-4f63-adb8-7a11bba31f0e" name="Organize traffic">
+          <includes xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityInclude"
+              id="b662e544-e22d-4f31-8c83-017bb6f29c8c" included="#6bf9bf90-2f47-41bc-969e-e463b3566780"/>
+          <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
+              id="001c469c-83dd-445c-ba19-8d790b121da6" involved="#3c36d9a5-87a0-4a28-bea8-cbc06f0d45db"/>
+        </ownedCapabilities>
+        <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
+            id="2971b828-5f57-4c1e-abd1-1e9057b29843" name="Order package">
+          <extends xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityExtend"
+              id="b3222154-de0c-4f63-8267-62935b754684" extended="#6bf9bf90-2f47-41bc-969e-e463b3566780"/>
+          <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
+              id="a682a980-7761-44bb-94dd-55462bfab556" involved="#3c36d9a5-87a0-4a28-bea8-cbc06f0d45db"/>
+        </ownedCapabilities>
+        <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
+            id="6bf9bf90-2f47-41bc-969e-e463b3566780" name="Organize package delivery">
+          <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
+              id="ec484257-a98c-4ede-939f-1037d02ff8e2" involved="#3c36d9a5-87a0-4a28-bea8-cbc06f0d45db"/>
+        </ownedCapabilities>
+      </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
           id="60f6d087-1432-48c5-aa6e-15f84f086b68" name="Interfaces"/>
       <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
@@ -1018,13 +1050,8 @@
       </ownedDataPkg>
       <ownedSystemComponentPkg xsi:type="org.polarsys.capella.core.data.ctx:SystemComponentPkg"
           id="c172e7b1-8726-40c9-832f-e6f59855d7bf" name="Structure">
-        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
-            id="28b045af-29ec-4aa6-93ab-a23cd7d4e9e7" targetElement="#1dceda7a-7347-43e0-82b5-4c257561bac1"
-            sourceElement="#6708c99f-32c3-4e89-92f8-336b998ff189"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="9f1987bf-75a8-4028-81ea-3cb45fb1f935"
             name="System" abstractType="#3c36d9a5-87a0-4a28-bea8-cbc06f0d45db"/>
-        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="6708c99f-32c3-4e89-92f8-336b998ff189"
-            name="Package receiver" abstractType="#01a1a2a6-ff17-48bc-a1d2-ad31349a646e"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="7b530653-5e35-4998-9b0d-c54df75a5dd1"
             name="Package provider" abstractType="#38ac2df0-f325-4dce-891f-7d9b193d73d4"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="d06ca577-af3b-4618-874d-573912e1386a"
@@ -1044,30 +1071,6 @@
             <ownedRegions xsi:type="org.polarsys.capella.core.data.capellacommon:Region"
                 id="99d3170e-829e-4020-84da-5dce26f04ba3" name="Default Region"/>
           </ownedStateMachines>
-        </ownedSystemComponents>
-        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
-            id="01a1a2a6-ff17-48bc-a1d2-ad31349a646e" name="Package receiver" actor="true">
-          <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
-              id="c7bd7eae-f9f9-4971-83d9-9c22e053ac94" targetElement="#c6714d4e-0f38-4e8f-a8b6-1b5a5e3af3c9"
-              sourceElement="#f5ce8959-3ce9-44bb-a8e3-fd1ed98e40e0"/>
-          <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
-              id="318e894f-3bed-456e-a747-f6e4f65ca0c3" targetElement="#ad12b7a9-5bbf-4ff6-814f-c733cded06ba"
-              sourceElement="#4341c689-9e53-4d51-b8db-c3c4d97807ba"/>
-          <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
-              id="59c0ce03-3382-4496-a660-b0542b889334" targetElement="#0faaa930-ccc9-4125-a86f-ce5db2dc6be6"
-              sourceElement="#10f210b3-3d0c-4a05-8742-a37f5fdfd803"/>
-          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-              id="f5ce8959-3ce9-44bb-a8e3-fd1ed98e40e0" targetElement="#0662a94d-7137-45a8-8f14-6f4607615bfc"
-              sourceElement="#01a1a2a6-ff17-48bc-a1d2-ad31349a646e"/>
-          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-              id="4341c689-9e53-4d51-b8db-c3c4d97807ba" targetElement="#1ef1dfbe-b40f-4417-9748-fb84461ccfd4"
-              sourceElement="#01a1a2a6-ff17-48bc-a1d2-ad31349a646e"/>
-          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-              id="10f210b3-3d0c-4a05-8742-a37f5fdfd803" targetElement="#c8bba877-fce4-4b5f-9dc6-64773a0ed47f"
-              sourceElement="#01a1a2a6-ff17-48bc-a1d2-ad31349a646e"/>
-          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
-              id="0e511a5f-514c-4514-8949-4ecab10bf91e" targetElement="#7990cd08-ad8c-4be9-a201-d00c105e691d"
-              sourceElement="#01a1a2a6-ff17-48bc-a1d2-ad31349a646e"/>
         </ownedSystemComponents>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
             id="38ac2df0-f325-4dce-891f-7d9b193d73d4" name="Package provider" actor="true"/>
@@ -1097,6 +1100,12 @@
               id="1f023d3e-53f8-453a-a7b8-06a57d9b71e0" involved="#38ac2df0-f325-4dce-891f-7d9b193d73d4"/>
           <ownedMissionInvolvements xsi:type="org.polarsys.capella.core.data.ctx:MissionInvolvement"
               id="e7f8c3c9-46b9-4b75-8e79-8c18efac8f3c" involved="#6b9b3dea-2be3-4f92-b0fa-73132a65e5df"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="36d894c7-d424-4dbd-b80c-0dd4e4cc480c" capability="#6bf9bf90-2f47-41bc-969e-e463b3566780"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="2cbf55c5-99ca-4eed-b835-972e7dae5979" capability="#2971b828-5f57-4c1e-abd1-1e9057b29843"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="b2721521-3769-46cc-93ee-0108e2a44c02" capability="#3a9af8b1-a255-4f63-adb8-7a11bba31f0e"/>
         </ownedMissions>
         <ownedMissions xsi:type="org.polarsys.capella.core.data.ctx:Mission" id="21f710e9-352b-4431-b2b2-fd3ecbcd6eb6"
             name="Ensure transport safety">
@@ -1108,6 +1117,10 @@
               id="9f7bf0ae-0efb-4fab-b20b-a7c5cd8818aa" involved="#088a28d8-929e-42e7-a621-6dd22e6266a4"/>
           <ownedMissionInvolvements xsi:type="org.polarsys.capella.core.data.ctx:MissionInvolvement"
               id="be320d30-d285-4bde-9181-401f4618b944" involved="#ac056b6c-893f-4a8f-871f-a07bcba368a0"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="de120886-d25e-46c6-9f28-37c912016c4e" capability="#f0c7f8bd-eead-44d3-9cfd-78d06bf26a8d"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="ff5ec543-3e9d-4ff5-b8a8-7158fa054c56" capability="#3a9af8b1-a255-4f63-adb8-7a11bba31f0e"/>
         </ownedMissions>
         <ownedMissions xsi:type="org.polarsys.capella.core.data.ctx:Mission" id="f3a4c06b-7d5e-445f-9497-935c1f8d4da6"
             name="Ensure service continuity">
@@ -1115,6 +1128,12 @@
               id="08b455b6-7f31-4e6b-99fe-5d0ffe090c74" involved="#3c36d9a5-87a0-4a28-bea8-cbc06f0d45db"/>
           <ownedMissionInvolvements xsi:type="org.polarsys.capella.core.data.ctx:MissionInvolvement"
               id="8d3f445f-7534-458d-b240-486b97cc09f4" involved="#02ef3f16-2a81-4d1a-a9f6-f32b19d3db16"/>
+          <ownedMissionInvolvements xsi:type="org.polarsys.capella.core.data.ctx:MissionInvolvement"
+              id="15f05068-d77e-4067-9829-a97a9f757eed" involved="#ac056b6c-893f-4a8f-871f-a07bcba368a0"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="f3a06fc9-80c5-482b-a87b-c1b0d1a3494f" capability="#4acc8bf6-56e4-46b4-b450-767db8735788"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="fe80c74a-ddc7-4cbc-803b-8f5bba834f79" capability="#f0c7f8bd-eead-44d3-9cfd-78d06bf26a8d"/>
         </ownedMissions>
       </ownedMissionPkg>
       <ownedOperationalAnalysisRealizations xsi:type="org.polarsys.capella.core.data.ctx:OperationalAnalysisRealization"
