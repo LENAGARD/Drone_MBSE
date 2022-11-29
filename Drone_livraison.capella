@@ -56,11 +56,11 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="f45a6e4f-731e-4cd6-8a8a-118954f9a06a" name="Define route"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="cb283bb4-b136-47b0-ba74-8eeff48a0fa8" name="Ordered reception"/>
+              id="cb283bb4-b136-47b0-ba74-8eeff48a0fa8" name="Receive order"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="b9b45b0d-9661-4cce-bff1-9d94218c5744" name="Organize the traffic"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="bc1e442a-6b2d-4d06-b470-1979ffc71490" name="Vehicule preparation"/>
+              id="bc1e442a-6b2d-4d06-b470-1979ffc71490" name="Prepare vehicule"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="9790f5d6-1ec0-43ae-a5f0-2f73e91e3a20" name="Order package"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
@@ -68,7 +68,7 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="71312174-6657-49d6-869f-60aaa8ae0557" name="Deliver package"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="5a274fb8-2b04-4aae-b601-34f7228d035d" name="Confirmed ordered reception"/>
+              id="5a274fb8-2b04-4aae-b601-34f7228d035d" name="Confirm order reception"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="c708e881-066b-418c-9a53-f5312ebf2f19" name="Receive confirmation order"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
@@ -630,6 +630,9 @@
               <ownedTransitions xsi:type="org.polarsys.capella.core.data.capellacommon:StateTransition"
                   id="32a1d7bb-70b2-4b5c-9e08-176ee1743deb" triggerDescription=""
                   source="#a35466bc-17de-43e9-b439-f0266efe59f9" target="#5a2ca4a0-d419-459c-929e-9efeec55259e"/>
+              <ownedTransitions xsi:type="org.polarsys.capella.core.data.capellacommon:StateTransition"
+                  id="1ff07e14-a686-46b6-b9b0-5490cfa10c6a" triggerDescription=""
+                  source="#5cbad293-e350-4e90-a259-210c31d13a70" target="#5a2ca4a0-d419-459c-929e-9efeec55259e"/>
             </ownedRegions>
           </ownedStateMachines>
         </ownedEntities>
@@ -681,6 +684,9 @@
               <ownedTransitions xsi:type="org.polarsys.capella.core.data.capellacommon:StateTransition"
                   id="909c8c49-7503-4b08-b7bc-c8ddc025a50f" triggerDescription=""
                   source="#a7d0f13b-7b14-4b90-ac0a-b44b806155e3" target="#643d4be0-6e76-47fb-9120-6e0d5a371330"/>
+              <ownedTransitions xsi:type="org.polarsys.capella.core.data.capellacommon:StateTransition"
+                  id="1653e98f-12be-44c0-85cf-ac56b73161a7" triggerDescription=""
+                  source="#75249fcf-90a3-4258-b378-0290cf20bd83" target="#8b6858a3-7950-4c1a-bd00-0afe88f842ff"/>
             </ownedRegions>
           </ownedStateMachines>
         </ownedEntities>
@@ -816,6 +822,9 @@
                     id="e14c322c-d357-4f9f-b527-2e7b722f3909" triggerDescription=""
                     source="#e016d625-da94-4e21-a965-a36cfa6431c9" target="#9c4109a2-9bb4-493b-8d83-e86f30636771"
                     triggers="#9a12675f-c004-4215-8151-df51b9c62ca9"/>
+                <ownedTransitions xsi:type="org.polarsys.capella.core.data.capellacommon:StateTransition"
+                    id="f08b04e1-1be9-4901-845f-7190966c2afa" triggerDescription=""
+                    source="#9c4109a2-9bb4-493b-8d83-e86f30636771" target="#a66994f2-7983-4992-85d5-bb73544e4804"/>
               </ownedRegions>
             </ownedStateMachines>
           </ownedEntities>
