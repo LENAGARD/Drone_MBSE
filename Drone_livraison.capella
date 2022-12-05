@@ -862,7 +862,7 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="1ef1dfbe-b40f-4417-9748-fb84461ccfd4" name="Order package">
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="dde382f1-824f-4d49-a79a-6a13bd0bc5ad" name="outOrder"/>
+                id="dde382f1-824f-4d49-a79a-6a13bd0bc5ad" name="outOrder" outgoingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
             <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                 id="0c97ea7c-3fc5-44c3-8fea-e2c71bca55aa" targetElement="#9790f5d6-1ec0-43ae-a5f0-2f73e91e3a20"
                 sourceElement="#1ef1dfbe-b40f-4417-9748-fb84461ccfd4"/>
@@ -870,9 +870,9 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="83a0ed4c-837c-4d07-9a4b-b3e2baa5de91" name="Receive order">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="1522f122-9588-4030-b9a8-e05045c286f6" name="inOrder"/>
+                id="1522f122-9588-4030-b9a8-e05045c286f6" name="inOrder" incomingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="466fe85d-cf5d-4369-881a-d72ebe6703b8" name="FOP 1"/>
+                id="466fe85d-cf5d-4369-881a-d72ebe6703b8" name="FOP 1" outgoingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
             <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                 id="6ac9f894-c933-48e4-ba15-f63e0bd177e1" targetElement="#cb283bb4-b136-47b0-ba74-8eeff48a0fa8"
                 sourceElement="#83a0ed4c-837c-4d07-9a4b-b3e2baa5de91"/>
@@ -882,9 +882,9 @@
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                 id="f790adf7-ed65-45d1-a051-ec21db9c5fe1" name="FIP 1"/>
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="71f048e1-8a34-48d0-a6bf-f4eae814510b" name="FIP 2"/>
+                id="71f048e1-8a34-48d0-a6bf-f4eae814510b" name="FIP 2" incomingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="8d344454-ce08-4218-a3eb-24382de066c4" name="outConfirm"/>
+                id="8d344454-ce08-4218-a3eb-24382de066c4" name="outConfirm" outgoingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
             <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                 id="d3967b7a-44f8-4d77-a58e-377677c55311" targetElement="#5a274fb8-2b04-4aae-b601-34f7228d035d"
                 sourceElement="#159ecaad-fe36-4dfa-8846-49f616db1e96"/>
@@ -892,7 +892,9 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="c8bba877-fce4-4b5f-9dc6-64773a0ed47f" name="Receive confirmation order">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="e54e243a-36be-4891-aa11-72d9324bc5a5" name="inConfirm"/>
+                id="e54e243a-36be-4891-aa11-72d9324bc5a5" name="inConfirm" incomingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="f3a11e7f-0c8c-402f-88b9-7d33af6c1e6b" name="FIP 2"/>
             <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                 id="f21014f5-cee1-47e4-a0d9-fa4f91d1e348" targetElement="#c708e881-066b-418c-9a53-f5312ebf2f19"
                 sourceElement="#c8bba877-fce4-4b5f-9dc6-64773a0ed47f"/>
@@ -900,25 +902,25 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="3aa89cad-578d-4f0d-bd77-81e0820b890d" name="Check package availability">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="d88b8455-ab90-4769-be0c-119513cec647" name="FIP 1"/>
+                id="d88b8455-ab90-4769-be0c-119513cec647" name="FIP 1" incomingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="3d4f29dd-e2a2-4205-9dcf-39302f7aa676" name="FOP 1"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="3b25df8e-73cb-4352-a51a-7842a8fdade6" name="FOP 2"/>
+                id="02e239dc-17f5-446c-b815-7c42299b44df" name="FOP 2"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="2dc6669d-7e24-4b34-93ec-9acdaad2d56f" name="Ask payment">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="e183f511-16f0-4429-9961-5ca0880dd88b" name="FIP 1"/>
+                id="e183f511-16f0-4429-9961-5ca0880dd88b" name="FIP 1" incomingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="ea96aa91-4276-47ca-b74d-082cd29840c9" name="FOP 1"/>
+                id="ea96aa91-4276-47ca-b74d-082cd29840c9" name="FOP 1" outgoingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="8daeb638-0c2d-4e77-81dc-bb35f9d27989" name="Pay">
             <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
-                id="a6dab696-b257-435b-a687-673fe81762bb" name="FIP 1"/>
+                id="a6dab696-b257-435b-a687-673fe81762bb" name="FIP 1" incomingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                id="eba4ca58-0da1-4662-8e62-3f0e39c97fd9" name="FOP 1"/>
+                id="9ebe1427-b1db-4e60-bdbd-01e0d44edb44" name="FOP 1"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="9bc16105-f3fc-48d3-a5c9-5abde27c2704" name="Generate disturbances">
@@ -1050,12 +1052,40 @@
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="1d22b794-6cab-4743-8dfb-d9493647ad5c" name="FOP 1"/>
           </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="c85043cd-e023-43fc-be2a-2cf7fb787d3e" name="Cancel order">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="3d8f258f-d549-4199-99b3-376c33a53f97" name="FIP 1"/>
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="481380d3-579b-44c4-a853-108e13984281" name="FIP 2"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="097ac293-63da-4c35-b890-71ad04378884" name="FOP 1"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="14e17263-0626-470d-bb01-51de6398fc65" name="Availability status"
+              kind="SELECT">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="482e565b-7c91-45c1-b01b-989c5ee2e273" name="FIP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="3b25df8e-73cb-4352-a51a-7842a8fdade6" name="FOP 2"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="32ef7f80-cc21-49e2-ba52-902ed0bc8927" name="FOP 3"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="7a133f8f-7193-452c-8af2-28158fb86068" name="Paymet status" kind="SELECT">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="2bb1434d-7843-4cc5-b93e-995166b3b359" name="FIP 1"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="eba4ca58-0da1-4662-8e62-3f0e39c97fd9" name="FOP 1" outgoingExchangeItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="3277f014-fba0-4bf9-8468-dd28c7fbdd79" name="FOP 2"/>
+          </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="8c6a9d5c-094a-406e-aa55-163f05a0e603" targetElement="#748f98c3-f8cf-4561-916c-6da37ae5eaa5"
               sourceElement="#a2e89e78-baf1-49be-a5d6-7fadb789b1c3"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="9d41bc4b-c271-4ac3-82e5-563e829581e0" name="Order" target="#1522f122-9588-4030-b9a8-e05045c286f6"
-              source="#dde382f1-824f-4d49-a79a-6a13bd0bc5ad">
+              source="#dde382f1-824f-4d49-a79a-6a13bd0bc5ad" exchangedItems="#8ee28936-2795-4a11-adea-edd1db4c2008">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="b8d77e4c-b710-4558-a8b4-ab15d7006a6d" targetElement="#fa47d2f9-06fb-4adf-8310-6a1530ec7bdc"
                 sourceElement="#9d41bc4b-c271-4ac3-82e5-563e829581e0"/>
@@ -1069,23 +1099,24 @@
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="6803c216-a91f-4e7e-ad7d-1cc5ca561df2" name="Confirm" target="#e54e243a-36be-4891-aa11-72d9324bc5a5"
-              source="#8d344454-ce08-4218-a3eb-24382de066c4">
+              source="#8d344454-ce08-4218-a3eb-24382de066c4" exchangedItems="#8ee28936-2795-4a11-adea-edd1db4c2008">
             <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
                 id="679f40aa-5a03-45a8-8b74-806310cd4d64" targetElement="#c3199511-e00d-4dc8-961d-5170188da41c"
                 sourceElement="#6803c216-a91f-4e7e-ad7d-1cc5ca561df2"/>
           </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="f0301e05-e277-4ced-bdd9-13f73b91b519" name="Order" target="#d88b8455-ab90-4769-be0c-119513cec647"
-              source="#466fe85d-cf5d-4369-881a-d72ebe6703b8"/>
+              source="#466fe85d-cf5d-4369-881a-d72ebe6703b8" exchangedItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="cc40a785-fdb5-4309-9fbb-8c463f0cd0f4" name="Confirm availability"
-              target="#e183f511-16f0-4429-9961-5ca0880dd88b" source="#3b25df8e-73cb-4352-a51a-7842a8fdade6"/>
+              target="#e183f511-16f0-4429-9961-5ca0880dd88b" source="#3b25df8e-73cb-4352-a51a-7842a8fdade6"
+              exchangedItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="a648f771-7c8b-472d-941a-b09e464cd107" name="Payment request" target="#a6dab696-b257-435b-a687-673fe81762bb"
-              source="#ea96aa91-4276-47ca-b74d-082cd29840c9"/>
+              source="#ea96aa91-4276-47ca-b74d-082cd29840c9" exchangedItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="32f8925b-e854-4d72-9801-d3a28bf203e8" name="Confirm payment" target="#71f048e1-8a34-48d0-a6bf-f4eae814510b"
-              source="#eba4ca58-0da1-4662-8e62-3f0e39c97fd9"/>
+              source="#eba4ca58-0da1-4662-8e62-3f0e39c97fd9" exchangedItems="#8ee28936-2795-4a11-adea-edd1db4c2008"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="d4991ab4-a3c1-445f-bf33-74ab2fd7404c" name="Energy" target="#ac241a2d-7478-4ffc-9198-b1bdf8a3f55f"
               source="#bb62f793-f804-4d56-8191-1e61cd5fd40e">
@@ -1153,6 +1184,21 @@
                 id="133e165b-f841-42bc-9306-8b0c348967dd" targetElement="#907fde94-78e3-444d-9ab9-81a6f9dbba0d"
                 sourceElement="#3f59c921-de9b-4070-bd1b-77786e5b0aed"/>
           </ownedFunctionalExchanges>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="30a05af8-f582-44f9-8820-4081a02f90ca" name="KO availability" target="#3d8f258f-d549-4199-99b3-376c33a53f97"
+              source="#32ef7f80-cc21-49e2-ba52-902ed0bc8927"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="80ccb9b0-5fa5-4dd2-b038-52be41f0026d" name="KO payment" target="#481380d3-579b-44c4-a853-108e13984281"
+              source="#3277f014-fba0-4bf9-8468-dd28c7fbdd79"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="527df9c4-ee4a-41cd-a34d-2cec807d8f3e" name="Availability" target="#482e565b-7c91-45c1-b01b-989c5ee2e273"
+              source="#02e239dc-17f5-446c-b815-7c42299b44df"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="7a17e44d-c1a2-4fb2-8d7d-1e19ed304378" name="Payment status" target="#2bb1434d-7843-4cc5-b93e-995166b3b359"
+              source="#9ebe1427-b1db-4e60-bdbd-01e0d44edb44"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="e0829bff-f989-4c89-808f-1caba990621f" name="Order cancelation" target="#f3a11e7f-0c8c-402f-88b9-7d33af6c1e6b"
+              source="#097ac293-63da-4c35-b890-71ad04378884"/>
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
@@ -1471,6 +1517,50 @@
             name="External disturbances supervisors" abstractType="#57be0751-925e-49f4-a807-5c985c4bc8db"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="9ac768ee-71dc-4a6e-b471-64d3faf4fd73"
             name="Vehicule manufacturer and certif authority" abstractType="#5e38d222-c98d-44ff-b61e-25e201d969a6"/>
+        <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
+            id="30b2c8ad-b136-49b3-a297-8984bdb78a1f" name="User 2 system" convoyedInformations="#8ee28936-2795-4a11-adea-edd1db4c2008"
+            source="#01f5aaaf-132b-423d-8b9d-2e11005155da" target="#eb7a3ddd-2af2-41d2-afa2-3bb13ec63b02"
+            kind="FLOW">
+          <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
+              id="5dc6552b-a4f4-46ed-9326-17553b647317" targetElement="#9d41bc4b-c271-4ac3-82e5-563e829581e0"
+              sourceElement="#30b2c8ad-b136-49b3-a297-8984bdb78a1f"/>
+        </ownedComponentExchanges>
+        <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
+            id="2d28afbc-ffd8-44ca-a4f2-d273065490d6" name="Payment dataflow" convoyedInformations="#8ee28936-2795-4a11-adea-edd1db4c2008"
+            source="#5faebb26-1dc1-4f5c-ad55-94917db9604e" target="#55e7cf1c-b4ef-4036-a0e3-1836e401f68e"
+            kind="FLOW">
+          <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
+              id="f8a11057-1a71-41b5-946b-fc3ac49a4d8b" targetElement="#a648f771-7c8b-472d-941a-b09e464cd107"
+              sourceElement="#2d28afbc-ffd8-44ca-a4f2-d273065490d6"/>
+        </ownedComponentExchanges>
+        <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
+            id="758cf2bc-ecc8-4092-aceb-cd69d8777ec6" name="Payment dataflow" convoyedInformations="#8ee28936-2795-4a11-adea-edd1db4c2008"
+            source="#bd51fe3f-2e10-4447-856a-57ea3acae466" target="#675ed650-eb25-488a-9b50-1e0cbe6dfcf3"
+            kind="FLOW"/>
+        <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
+            id="2b11ae9b-efac-4ea5-adf5-12b72faf8bd7" name="System 2 user" convoyedInformations="#8ee28936-2795-4a11-adea-edd1db4c2008"
+            source="#11b57661-beb6-49a2-8541-845e3fa7e459" target="#9950b863-5159-4191-a6ef-3add46936d28"
+            kind="FLOW">
+          <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
+              id="e7927ba6-7561-46dd-94dd-6515e04d3668" targetElement="#6803c216-a91f-4e7e-ad7d-1cc5ca561df2"
+              sourceElement="#2b11ae9b-efac-4ea5-adf5-12b72faf8bd7"/>
+        </ownedComponentExchanges>
+        <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
+            id="70d6d08b-96ad-484a-a984-cc515276779a" name="System 2 user" convoyedInformations="#8ee28936-2795-4a11-adea-edd1db4c2008"
+            source="#19ea4221-94c9-4e02-bee9-2af067187a83" target="#0a5505c1-860c-4ebb-bfdf-8f14b7af8802"
+            kind="FLOW">
+          <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
+              id="9133b1ac-f5bc-4083-8f3a-7793ba9aa9a9" targetElement="#e0829bff-f989-4c89-808f-1caba990621f"
+              sourceElement="#70d6d08b-96ad-484a-a984-cc515276779a"/>
+        </ownedComponentExchanges>
+        <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
+            id="063cc13b-dbd2-4963-82ce-f6c31f5ce09e" name="Payment dataflow" convoyedInformations="#8ee28936-2795-4a11-adea-edd1db4c2008"
+            source="#10703d9a-c9f5-4e81-a9da-d5e18fc95246" target="#c1b23063-6537-4d70-85e1-05751dd7e470"
+            kind="FLOW">
+          <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
+              id="73779913-2747-4d41-b290-3b11c7fb8736" targetElement="#80ccb9b0-5fa5-4dd2-b038-52be41f0026d"
+              sourceElement="#063cc13b-dbd2-4963-82ce-f6c31f5ce09e"/>
+        </ownedComponentExchanges>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
             id="3c36d9a5-87a0-4a28-bea8-cbc06f0d45db" name="System">
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
@@ -1503,11 +1593,52 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="33c09d6b-a53e-4faf-ad88-884d1ea3b1a3" targetElement="#f7aef0e5-21c3-400d-8bcd-4bb57234a3da"
               sourceElement="#3c36d9a5-87a0-4a28-bea8-cbc06f0d45db"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="46b51261-dd58-4d4b-baaf-4ace5def9a30" targetElement="#c85043cd-e023-43fc-be2a-2cf7fb787d3e"
+              sourceElement="#3c36d9a5-87a0-4a28-bea8-cbc06f0d45db"/>
           <ownedStateMachines xsi:type="org.polarsys.capella.core.data.capellacommon:StateMachine"
               id="a819d354-4e1f-48dd-9f97-6062f0c8bed9" name="System State Machine">
             <ownedRegions xsi:type="org.polarsys.capella.core.data.capellacommon:Region"
                 id="99d3170e-829e-4020-84da-5dce26f04ba3" name="Default Region"/>
           </ownedStateMachines>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="eb7a3ddd-2af2-41d2-afa2-3bb13ec63b02" name="CP 1" orientation="IN"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="b5b87a48-2306-4e6f-bd0c-ce70b0a4bc3b" targetElement="#1522f122-9588-4030-b9a8-e05045c286f6"
+                sourceElement="#eb7a3ddd-2af2-41d2-afa2-3bb13ec63b02"/>
+          </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="55e7cf1c-b4ef-4036-a0e3-1836e401f68e" name="CP 2" orientation="IN"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="cf98fc25-d8ed-4645-a6a2-f6635879b11a" targetElement="#ea96aa91-4276-47ca-b74d-082cd29840c9"
+                sourceElement="#55e7cf1c-b4ef-4036-a0e3-1836e401f68e"/>
+          </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="675ed650-eb25-488a-9b50-1e0cbe6dfcf3" name="CP 3" orientation="IN"
+              kind="FLOW"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="11b57661-beb6-49a2-8541-845e3fa7e459" name="CP 4" orientation="OUT"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="562d14dd-923c-455c-b83b-b8eae5722c3e" targetElement="#8d344454-ce08-4218-a3eb-24382de066c4"
+                sourceElement="#11b57661-beb6-49a2-8541-845e3fa7e459"/>
+          </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="19ea4221-94c9-4e02-bee9-2af067187a83" name="CP 5" orientation="OUT"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="a174f85b-e5ce-44a8-a63f-54567ca657a6" targetElement="#097ac293-63da-4c35-b890-71ad04378884"
+                sourceElement="#19ea4221-94c9-4e02-bee9-2af067187a83"/>
+          </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="c1b23063-6537-4d70-85e1-05751dd7e470" name="CP 6" orientation="IN"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="c988586c-21a5-41e9-8775-9c3738ab0c2e" targetElement="#481380d3-579b-44c4-a853-108e13984281"
+                sourceElement="#c1b23063-6537-4d70-85e1-05751dd7e470"/>
+          </ownedFeatures>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="53a64a24-ec11-4773-8f78-1ad4414e8828" targetElement="#c6f1f6c2-62d2-4dcd-8342-11ba3d05e9ef"
               sourceElement="#3c36d9a5-87a0-4a28-bea8-cbc06f0d45db"/>
@@ -1523,6 +1654,9 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="6accfc0c-4e96-4719-a2dc-59e33566a49f" targetElement="#3aa89cad-578d-4f0d-bd77-81e0820b890d"
               sourceElement="#38ac2df0-f325-4dce-891f-7d9b193d73d4"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="a184fa67-1685-4456-90a3-80574203de57" targetElement="#14e17263-0626-470d-bb01-51de6398fc65"
+              sourceElement="#38ac2df0-f325-4dce-891f-7d9b193d73d4"/>
         </ownedSystemComponents>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
             id="2f1bba4a-5a8f-4e19-9170-2060e7d604db" name="Package receiver" actor="true">
@@ -1535,6 +1669,47 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="56ca549f-da4e-447f-8f7f-f256de274961" targetElement="#8daeb638-0c2d-4e77-81dc-bb35f9d27989"
               sourceElement="#2f1bba4a-5a8f-4e19-9170-2060e7d604db"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="cd56ceb2-195d-41d1-a3e2-a0ad08732aab" targetElement="#7a133f8f-7193-452c-8af2-28158fb86068"
+              sourceElement="#2f1bba4a-5a8f-4e19-9170-2060e7d604db"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="01f5aaaf-132b-423d-8b9d-2e11005155da" name="CP 1" orientation="OUT"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="5ba0558f-2b3d-4d57-85da-207b635ed25b" targetElement="#dde382f1-824f-4d49-a79a-6a13bd0bc5ad"
+                sourceElement="#01f5aaaf-132b-423d-8b9d-2e11005155da"/>
+          </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="5faebb26-1dc1-4f5c-ad55-94917db9604e" name="CP 2" orientation="OUT"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="0a1a8098-fdc6-4674-8fad-1d348e646349" targetElement="#a6dab696-b257-435b-a687-673fe81762bb"
+                sourceElement="#5faebb26-1dc1-4f5c-ad55-94917db9604e"/>
+          </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="bd51fe3f-2e10-4447-856a-57ea3acae466" name="CP 3" orientation="OUT"
+              kind="FLOW"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="9950b863-5159-4191-a6ef-3add46936d28" name="CP 4" orientation="IN"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="63b81ba6-7f19-405f-b373-abeaa7663f08" targetElement="#e54e243a-36be-4891-aa11-72d9324bc5a5"
+                sourceElement="#9950b863-5159-4191-a6ef-3add46936d28"/>
+          </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="0a5505c1-860c-4ebb-bfdf-8f14b7af8802" name="CP 5" orientation="IN"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="0f7855bc-46ee-48d5-98af-5c82692a5782" targetElement="#f3a11e7f-0c8c-402f-88b9-7d33af6c1e6b"
+                sourceElement="#0a5505c1-860c-4ebb-bfdf-8f14b7af8802"/>
+          </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="10703d9a-c9f5-4e81-a9da-d5e18fc95246" name="CP 6" orientation="OUT"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="ea14606d-f125-4ee1-96e2-605312407565" targetElement="#3277f014-fba0-4bf9-8468-dd28c7fbdd79"
+                sourceElement="#10703d9a-c9f5-4e81-a9da-d5e18fc95246"/>
+          </ownedFeatures>
         </ownedSystemComponents>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
             id="6b9b3dea-2be3-4f92-b0fa-73132a65e5df" name="Energy provider" actor="true"/>
