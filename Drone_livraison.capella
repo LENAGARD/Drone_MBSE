@@ -1448,6 +1448,33 @@
             <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEvent"
                 id="759b1400-f749-4f65-b195-0731106d15ee"/>
           </ownedScenarios>
+          <ownedScenarios xsi:type="org.polarsys.capella.core.data.interaction:Scenario"
+              id="e73ce53c-2eac-439e-b34c-74258b6be266" name="[ES] Order package"
+              kind="DATA_FLOW">
+            <ownedInstanceRoles xsi:type="org.polarsys.capella.core.data.interaction:InstanceRole"
+                id="7b5ac3ee-0f50-43eb-b9ae-3f70007e2990" name="System" representedInstance="#9f1987bf-75a8-4028-81ea-3cb45fb1f935"/>
+            <ownedInstanceRoles xsi:type="org.polarsys.capella.core.data.interaction:InstanceRole"
+                id="c6d3017a-6faf-419f-a0d7-aaa643557bbb" name="Package receiver"
+                representedInstance="#d06ca577-af3b-4618-874d-573912e1386a"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
+                id="b4cc39cf-b0a1-42a6-8861-68bbb06ab6a0" name="Order package" coveredInstanceRoles="#c6d3017a-6faf-419f-a0d7-aaa643557bbb"
+                relatedAbstractFunction="#1ef1dfbe-b40f-4417-9748-fb84461ccfd4"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
+                id="09d8beea-0aae-402a-9f8e-9125eea8ad64" name="Order package" coveredInstanceRoles="#c6d3017a-6faf-419f-a0d7-aaa643557bbb"
+                relatedAbstractFunction="#1ef1dfbe-b40f-4417-9748-fb84461ccfd4"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
+                id="189f3f45-30ba-4b3c-a082-96dc43776b2e" name="Receive order" coveredInstanceRoles="#7b5ac3ee-0f50-43eb-b9ae-3f70007e2990"
+                relatedAbstractFunction="#83a0ed4c-837c-4d07-9a4b-b3e2baa5de91"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
+                id="1d19f99b-59bd-4aad-870d-2141d8499c11" name="Receive order" coveredInstanceRoles="#7b5ac3ee-0f50-43eb-b9ae-3f70007e2990"
+                relatedAbstractFunction="#83a0ed4c-837c-4d07-9a4b-b3e2baa5de91"/>
+            <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment"
+                id="276a656a-e7aa-41e6-8356-02af66fb7517" start="#b4cc39cf-b0a1-42a6-8861-68bbb06ab6a0"
+                finish="#09d8beea-0aae-402a-9f8e-9125eea8ad64" relatedAbstractFunction="#1ef1dfbe-b40f-4417-9748-fb84461ccfd4"/>
+            <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment"
+                id="76b5d569-006d-48ef-b31a-6b0c6ff981cc" start="#189f3f45-30ba-4b3c-a082-96dc43776b2e"
+                finish="#1d19f99b-59bd-4aad-870d-2141d8499c11" relatedAbstractFunction="#83a0ed4c-837c-4d07-9a4b-b3e2baa5de91"/>
+          </ownedScenarios>
           <extends xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityExtend"
               id="b3222154-de0c-4f63-8267-62935b754684" extended="#6bf9bf90-2f47-41bc-969e-e463b3566780"/>
           <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
@@ -3383,7 +3410,30 @@
         </ownedLogicalFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.la:CapabilityRealizationPkg"
-          id="e7c987c7-2550-43d9-b7ac-3d1c083305b4" name="Capabilities"/>
+          id="e7c987c7-2550-43d9-b7ac-3d1c083305b4" name="Capabilities">
+        <ownedCapabilityRealizations xsi:type="org.polarsys.capella.core.data.la:CapabilityRealization"
+            id="b0a5bf1f-b615-40ad-963f-422b855dfffc" name="CapabilityRealization 1">
+          <ownedScenarios xsi:type="org.polarsys.capella.core.data.interaction:Scenario"
+              id="be09fca9-853e-4a76-ba85-edc13a18cc07" name="[ES] Order Package"
+              kind="DATA_FLOW">
+            <ownedInstanceRoles xsi:type="org.polarsys.capella.core.data.interaction:InstanceRole"
+                id="6c841501-7f23-43f5-9cb6-3714fcd0e279" name="Payment management"
+                representedInstance="#ac59dfea-49ba-4e15-9f24-8762072fba96"/>
+            <ownedInstanceRoles xsi:type="org.polarsys.capella.core.data.interaction:InstanceRole"
+                id="9bdfa2fa-31f5-46df-a047-e9f9adf61226" name="Order management"
+                representedInstance="#a34093ea-850b-4d01-ad01-84cbe701c830"/>
+            <ownedInstanceRoles xsi:type="org.polarsys.capella.core.data.interaction:InstanceRole"
+                id="4107c956-2c7e-4dc2-bd54-b4afd6981e37" name="Package receiver"
+                representedInstance="#992b4f4d-b736-4f87-8b9d-36b6c0ad682f"/>
+          </ownedScenarios>
+          <ownedCapabilityRealizationInvolvements xsi:type="org.polarsys.capella.core.data.capellacommon:CapabilityRealizationInvolvement"
+              id="2ab60c4b-1ce8-482f-aa22-e918e9c7741c" involved="#ba8f64ec-4f8f-4f1b-9909-dcf4318b6c34"/>
+          <ownedCapabilityRealizationInvolvements xsi:type="org.polarsys.capella.core.data.capellacommon:CapabilityRealizationInvolvement"
+              id="caa5964f-9cd3-4d6a-bed6-78ee20ccd3be" involved="#1a8fb94b-6b46-4477-92bf-eb129b6148a0"/>
+          <ownedCapabilityRealizationInvolvements xsi:type="org.polarsys.capella.core.data.capellacommon:CapabilityRealizationInvolvement"
+              id="277e3e2e-a277-4436-a67a-8af3eff465c4" involved="#93ef3e0b-c425-45a0-8e90-2d7df46513f9"/>
+        </ownedCapabilityRealizations>
+      </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
           id="95e01df4-7287-432a-b289-45cedd963af9" name="Interfaces"/>
       <ownedDataPkg xsi:type="org.polarsys.capella.core.data.information:DataPkg"
