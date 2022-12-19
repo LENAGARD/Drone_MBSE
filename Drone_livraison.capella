@@ -5764,7 +5764,7 @@
                 sourceElement="#03e50263-9688-445f-879d-0fb742326c47"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.pa:PhysicalFunction"
-              id="9bc6ee96-6f6a-491e-a0ad-e6620f540b46" name="Communicate meteo prevision ">
+              id="9bc6ee96-6f6a-491e-a0ad-e6620f540b46" name="Communicate meteo prevision  ">
             <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                 id="ade4e6e5-c227-45d3-b740-8d17290c31f3" name="FOP 1">
               <ownedPortRealizations xsi:type="org.polarsys.capella.core.data.information:PortRealization"
@@ -6541,6 +6541,18 @@
                 id="89d5620e-bdd2-439d-ad50-e0341e9d10d0" deployedElement="#04f5e19f-aa30-4d53-8b03-2e9d5b9738ac"
                 location="#b2c0e810-6087-4ed6-bb89-73cdfb2a36dc"/>
           </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="4cda8eff-8579-428e-98b9-9e63c942f318"
+              name="Charging station" abstractType="#2ff56327-7660-4df7-b7ad-5d5e32eeab3a">
+            <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                id="cfb70e4c-ceae-46d4-8435-7975ded1d34e" deployedElement="#134a60f4-1ab2-48cf-a73f-dbd8c4e83c29"
+                location="#4cda8eff-8579-428e-98b9-9e63c942f318"/>
+          </ownedFeatures>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="b6c0e55a-8c89-41a8-878f-cb0fd9a73ab8"
+              name="GPS" abstractType="#c30cce62-396a-497b-b28b-1de634e7771d">
+            <ownedDeploymentLinks xsi:type="org.polarsys.capella.core.data.pa.deployment:PartDeploymentLink"
+                id="aaf40deb-4ed1-4ccf-a249-fb723361f72e" deployedElement="#582cac7d-53d4-4180-a9d2-dc7f5fb25887"
+                location="#b6c0e55a-8c89-41a8-878f-cb0fd9a73ab8"/>
+          </ownedFeatures>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="c3ef0f07-206c-49ca-afd3-f6d65c0e2ef4" targetElement="#f6c5bb8f-0325-4bb8-96d3-bc54c475ca2d"
               sourceElement="#1dbf1b2a-fce5-48a1-96e9-9ce56160417a"/>
@@ -6693,6 +6705,12 @@
               id="77e19f54-3457-4dc2-86f8-565a9c964020" name="PC 6" nature="BEHAVIOR"/>
           <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
               id="fb4e070f-1337-4737-8636-8ba89dd6ed2a" name="Payment Server" kind="SERVICES"
+              nature="NODE"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="2ff56327-7660-4df7-b7ad-5d5e32eeab3a" name="Charging station" kind="MATERIALS"
+              nature="NODE"/>
+          <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
+              id="c30cce62-396a-497b-b28b-1de634e7771d" name="GPS" kind="MATERIALS"
               nature="NODE"/>
         </ownedPhysicalComponents>
         <ownedPhysicalComponents xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponent"
